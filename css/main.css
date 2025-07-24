@@ -12,11 +12,26 @@ a {
   color: #000;
   text-decoration: none;
 }
+.header {
+  width: 1200px;
+  position: relative;
+  background-color: aqua;
+  margin: auto;
+}
+/* 💡 진짜 요소로 배경 추가 */
+.submenu-bg {
+  position: absolute;
+  top: 100px;
+  width: 1200px;
+  height: 200px;
+  background-color: #ddd;
+  display: none;
+}
 nav {
   position: relative;
   width: 1000px;
   height: 100px;
-  background-color: #bbb;
+  background-color: #9ea1ce;
 }
 /* 메인 메뉴 */
 .gnb {
@@ -50,11 +65,13 @@ nav {
 /* 서브 메뉴 */
 .depth2 {
   display: none;
+  position: relative;
+  z-index: 1;
 }
 .depth2 > li > a {
   display: block;
   line-height: 50px;
-  background-color: #dddddd;
+  background-color: #ddd;
 }
 /* .depth2>li>a:hover{
     color: #fff;
@@ -65,10 +82,14 @@ nav {
   background-color: #999;
 }
 /* 서브 메뉴 전체 나오기 */
-.gnb:hover .depth2 {
+/* .gnb:hover .depth2 {
   display: block;
-}
+} */
 /* 자식 서브메뉴만 나오게 하기 */
 /* .gnb > li:hover .depth2 {
   display: block;
 } */
+.gnb:hover + .submenu-bg,
+.gnb:hover .depth2 {
+  display: block;
+}
