@@ -13,10 +13,10 @@ a {
   text-decoration: none;
 }
 nav {
-    position: relative;
+  position: relative;
   width: 1000px;
   height: 100px;
-  background-color: blueviolet;
+  background-color: #bbb;
 }
 /* 메인 메뉴 */
 .gnb {
@@ -26,17 +26,45 @@ nav {
   right: 20px;
   display: flex;
   width: 600px;
-  height: 100%;
+  /* height: 100%; */
   text-align: center;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 .gnb > li {
   width: calc(100% / 4);
-  background-color: aliceblue;
+  height: 50px;
+  /* background-color: aliceblue; */
 }
 .gnb > li > a {
   display: block;
   line-height: 50px;
   color: #fff;
   background-color: #333;
+}
+/* .gnb > li > a:hover{
+    background-color: #666;
+} */
+.gnb > li:hover > a {
+  background-color: #666;
+}
+/* 서브 메뉴 */
+.depth2 {
+  display: none;
+}
+.depth2 > li > a {
+  display: block;
+  line-height: 50px;
+  background-color: #dddddd;
+}
+/* .depth2>li>a:hover{
+    color: #fff;
+    background-color: #999;
+} */
+.depth2 > li:hover > a {
+  color: #fff;
+  background-color: #999;
+}
+/* 서브 메뉴 전체 나오기 */
+.gnb:hover .depth2 {
+  display: block;
 }
